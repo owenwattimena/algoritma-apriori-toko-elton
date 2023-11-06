@@ -31,9 +31,9 @@ class ProdukController extends Controller
 
         if(Produk::create($data))
         {
-            return redirect()->back()->with(AlertFormatter::success('Berhasil menambahkan kategori'));
+            return redirect()->back()->with(AlertFormatter::success('Berhasil menambahkan produk'));
         }
-        return redirect()->back()->with(AlertFormatter::danger('Gagal menambahkan kategori'));
+        return redirect()->back()->with(AlertFormatter::danger('Gagal menambahkan produk'));
     }
 
     public function update(Request $request, int $id)
