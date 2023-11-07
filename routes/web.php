@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\Master\KategoriController;
 use App\Http\Controllers\Master\ProdukController;
 use App\Http\Controllers\Master\SatuanController;
@@ -61,4 +62,7 @@ Route::prefix('master')->group(function(){
         Route::put('/{id}', [ProdukController::class, 'update'])->name('master.produk.update');
         Route::delete('/{id}', [ProdukController::class, 'delete'])->name('master.produk.delete');
     });
+});
+Route::prefix('laporan')->group(function(){
+    Route::get('/', [LaporanController::class, 'index'])->name('laporan');
 });
