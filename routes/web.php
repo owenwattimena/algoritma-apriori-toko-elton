@@ -64,5 +64,5 @@ Route::prefix('master')->group(function(){
     });
 });
 Route::prefix('laporan')->group(function(){
-    Route::get('/', [LaporanController::class, 'index'])->name('laporan');
+    Route::any('/', [LaporanController::class, 'index'])->name('laporan');
 });
