@@ -11,7 +11,7 @@
     <div class="col-md-12 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
-                <h6 class="card-title">Laporan Analisa Algoritma Apriori</h6>
+                <h6 class="card-title">Laporan Analisa Transaksi Penjualan dengan Algoritma Apriori</h6>
                 <div class="row">
                     <div class="col-md-12">
                         <ul class="list-group mb-2">

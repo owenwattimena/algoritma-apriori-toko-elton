@@ -33,15 +33,15 @@
                                     <div class="row">
                                         <div class="mb-3 col-md-4">
                                             <label for="inputSKU" class="form-label">SKU</label>
-                                            <input type="text" class="form-control" id="inputSKU" placeholder="Masukan SKU" name="sku">
+                                            <input type="text" class="form-control" id="inputSKU" placeholder="Masukan SKU" name="sku" required>
                                         </div>
                                         <div class="mb-3 col-md-8">
                                             <label for="inputNamaProduk" class="form-label">Nama Produk</label>
-                                            <input type="text" class="form-control" id="inputNamaProduk" placeholder="Masukan Nama Produk" name="nama_produk">
+                                            <input type="text" class="form-control" id="inputNamaProduk" placeholder="Masukan Nama Produk" name="nama_produk" required>
                                         </div>
                                         <div class="mb-3 col-md-6">
                                             <label for="selectSatuan" class="form-label">Satuan</label>
-                                            <select class="form-control" id="selectSatuan" name="id_satuan">
+                                            <select class="form-control" id="selectSatuan" name="id_satuan" required>
                                                 @foreach ($satuan as $item)
                                                 <option value="{{ $item->id }}">{{ $item->nama_satuan }}</option>
                                                 @endforeach
@@ -49,7 +49,7 @@
                                         </div>
                                         <div class="mb-3 col-md-6">
                                             <label for="selectKategori" class="form-label">Kategori</label>
-                                            <select class="form-control" id="selectKategori" name="id_kategori">
+                                            <select class="form-control" id="selectKategori" name="id_kategori" required>
                                                 @foreach ($kategori as $item)
                                                 <option value="{{ $item->id }}">{{ $item->nama_kategori }}</option>
                                                 @endforeach
@@ -57,7 +57,7 @@
                                         </div>
                                         <div class="mb-3 col-md-12">
                                             <label for="inputHarga" class="form-label">Harga</label>
-                                            <input type="number" class="form-control" id="inputHarga" placeholder="Masukan Harga" name="harga" step=".01">
+                                            <input type="number" class="form-control" id="inputHarga" placeholder="Masukan Harga" name="harga" step=".01" required>
                                         </div>
 
 

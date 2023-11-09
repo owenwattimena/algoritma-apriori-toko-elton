@@ -32,7 +32,7 @@
                                     @csrf
                                     <div class="mb-3">
                                         <label for="inputKategori" class="form-label">Kategori</label>
-                                        <input type="text" class="form-control" id="inputKategori" placeholder="Masukan Kategori" name="nama_kategori">
+                                        <input type="text" class="form-control" id="inputKategori" placeholder="Masukan Kategori" name="nama_kategori" required>
                                     </div>
                                 </div>
                                 <div class="modal-footer">
@@ -95,7 +95,7 @@
                                                 @method('put')
                                                 <div class="mb-3">
                                                     <label for="inputKategori" class="form-label">Kategori</label>
-                                                    <input type="text" class="form-control" id="inputKategori" placeholder="Masukan Kategori" name="nama_kategori" value="{{ $item->nama_kategori }}">
+                                                    <input type="text" class="form-control" id="inputKategori" placeholder="Masukan Kategori" name="nama_kategori" value="{{ $item->nama_kategori }}" required>
                                                 </div>
                                             </div>
                                             <div class="modal-footer">

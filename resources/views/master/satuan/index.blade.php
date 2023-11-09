@@ -32,11 +32,11 @@
                                     @csrf
                                     <div class="mb-3">
                                         <label for="inputKode" class="form-label">Kode</label>
-                                        <input type="text" class="form-control" id="inputKode" placeholder="Masukan Satuan" name="kode">
+                                        <input type="text" class="form-control" id="inputKode" placeholder="Masukan Satuan" name="kode" required>
                                     </div>
                                     <div class="mb-3">
                                         <label for="inputSatuan" class="form-label">Satuan</label>
-                                        <input type="text" class="form-control" id="inputSatuan" placeholder="Masukan Satuan" name="nama_satuan">
+                                        <input type="text" class="form-control" id="inputSatuan" placeholder="Masukan Satuan" name="nama_satuan" required>
                                     </div>
                                 </div>
                                 <div class="modal-footer">
