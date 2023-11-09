@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\Master\KategoriController;
 use App\Http\Controllers\Master\ProdukController;
@@ -18,10 +20,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('login', [AuthController::class, 'login'])->name('login');
 
-Route::get('/', function () {
-    return view('templates.index');
-});
+Route::get('/', [DashboardController::class, 'index'] )->name('dashboard');
 
 Route::prefix('ajax')->group(function(){
     Route::get('get-produk/{id}', [\App\Http\Controllers\Ajax\ProdukController::class,'getProduct']);

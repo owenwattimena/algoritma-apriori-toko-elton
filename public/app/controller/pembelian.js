@@ -265,7 +265,7 @@ var CtrlPembelian = function () {
                     // $.LoadingOverlay("hide");
                     var response = erors.responseJSON;
                     console.log(response)
-                    alert('Error Connection ..');
+                    alert(response);
                 }
             });
         },

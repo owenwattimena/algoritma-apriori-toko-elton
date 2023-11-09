@@ -25,6 +25,11 @@ class LaporanController extends Controller
             "transaksi" => []
         ];
         $dataset = [];
+        $data['periode_awal'] = date('Y-m-d');
+        $data['periode_akhir'] = date('Y-m-d');
+        $data['min_sup'] = 2;
+        $data['min_conf'] = 75;
+        $data['result'] = [];
 
         if($request->periode_awal != null && $request->periode_akhir != null)
         {
@@ -48,7 +53,9 @@ class LaporanController extends Controller
             {
                 $result = $this->result($dataset, $request->min_sup, $request->min_conf);
                 $data['result'] = $result;
-                // dd($result);
+            }
+            else{
+                $data['no_data'] = 'Tidak ditemukan data transaksi yang dapat di analisa.';
             }
         }
         return view('laporan.index', $data);

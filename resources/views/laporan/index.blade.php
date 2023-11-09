@@ -45,7 +45,7 @@
                         </ul>
                     </div>
                 </div>
-
+                @if ($result)
                 <h6 class="mt-5">Dataset</h6>
                 <div class="table-responsive">
                     <table class="table table-sm">
@@ -132,6 +132,14 @@
                         </tbody>
                     </table>
                 </div>
+                @else
+                @if(isset($no_data))
+                <div class="alert alert-warning" role="alert">
+                    {{$no_data}}
+                </div>
+                @endif
+                @endif
+
             </div>
         </div>
     </div>
