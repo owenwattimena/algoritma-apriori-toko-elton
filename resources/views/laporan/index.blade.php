@@ -70,6 +70,7 @@
                     </table>
                 </div>
                 <h6 class="mt-5">Frekuensi Itemset</h6>
+                <div class="table-responsive">
                 <table class="table table-sm">
                     <thead>
                         <tr>
@@ -99,6 +100,7 @@
                     </tbody>
 
                 </table>
+                </div>
                 <h6 class="mt-5">Aturan Assosiatif</h6>
                 <div class="table-responsive">
                     <table class="table table-sm" id="table">

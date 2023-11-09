@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\DetailTransaksi;
 use App\Models\Produk;
 use App\Models\Transaksi;
+use Auth;
 use DB;
 use Illuminate\Http\Request;
 
@@ -29,7 +30,7 @@ class PembelianController extends Controller
                 $data['transaksi']['jenis'] = 'pembelian';
                 $data['transaksi']['created_at'] = now();
                 $data['transaksi']['final_at'] = now();
-                $data['transaksi']['id_user'] = 1;
+                $data['transaksi']['id_user'] = Auth::user()->id;
                 $transaksi = Transaksi::create($data['transaksi']);
 
                 for($i = 0; $i < count($data['detail_transaksi']); $i++){
