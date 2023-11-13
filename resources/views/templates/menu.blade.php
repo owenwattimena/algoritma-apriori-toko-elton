@@ -7,6 +7,8 @@
       </a>
     </li>
     {{-- <li class="nav-item nav-category">Master</li> --}}
+    @if (auth()->user()->role == 'admin')
+
     <li class="nav-item">
       <a class="nav-link" data-bs-toggle="collapse" href="#transaksi" role="button" aria-expanded="false" aria-controls="transaksi">
         <i class="link-icon" data-feather="dollar-sign"></i>
@@ -44,6 +46,8 @@
         </ul>
       </div>
     </li>
+    @endif
+
     <li class="nav-item">
       <a href="{{route('laporan')}}" class="nav-link">
         <i class="link-icon" data-feather="file-text"></i>

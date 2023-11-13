@@ -24,9 +24,10 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         User::create([
-            'nama' => 'Admin',
-            'username' => 'admin',
+            'nama' => 'Toko Elton',
+            'username' => 'pemilik',
             'password' => Hash::make('123456'),
+            'role' => 'owner'
         ]);
     }
 }
